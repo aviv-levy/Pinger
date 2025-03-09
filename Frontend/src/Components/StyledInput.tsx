@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../CSS/inputs.css'
-import { User } from '../Services/Interfaces';
 import Error from './Error';
 
 interface Props {
@@ -28,7 +27,7 @@ function StyledInput({ type, inputValue, placeholder, setValueFunc, inputParam, 
                             name={inputParam}
                             value={placeholder}
                             id={id}
-                            onChange={(e) => setValueFunc((prevState: User) => ({ ...prevState, [inputParam]: e.target.value }))}
+                            onChange={(e) => setValueFunc((prevState: any) => ({ ...prevState, [inputParam]: e.target.value }))}
                         />
                         <label className="form-check-label me-2" htmlFor={id}>{placeholder}</label>
                     </div>
@@ -55,7 +54,7 @@ function StyledInput({ type, inputValue, placeholder, setValueFunc, inputParam, 
                                         value={inputValueState || ''}
                                         onChange={(e) => {
                                             setInputValueState(e.target.value)
-                                            setValueFunc((prevState: User) => ({ ...prevState, [inputParam]: type === 'number' ? +e.target.value : e.target.value }))
+                                            setValueFunc((prevState: any) => ({ ...prevState, [inputParam]: type === 'number' ? +e.target.value : e.target.value }))
                                         }}
                                         required />
                                     <span className="placeholderr mx-2">{placeholder}</span>

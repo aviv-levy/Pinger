@@ -1,4 +1,3 @@
-// import { RotatingLines } from "react-loader-spinner";
 import Modal from 'react-modal';
 import '../CSS/Loading.css';
 
@@ -19,13 +18,6 @@ function Loading({ isLoading }: Prpos) {
                 <div className="loader">
                 </div>
                 <h2>Checking Connection...</h2>
-                {/* <RotatingLines
-                    strokeColor="grey"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    width="96"
-                    visible={true}
-                /> */}
             </div>
         </Modal>
 
